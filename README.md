@@ -11,11 +11,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
+[sample]: ./sample.png "Sample Signs"
+[distro]: ./distro.png "Sign counts"
 [image1]: ./from_web/1.jpg "Traffic Sign"
 [image2]: ./from_web/2.jpg "Traffic Sign"
 [image3]: ./from_web/3.jpg "Traffic Sign"
 [image4]: ./from_web/4.jpg "Traffic Sign"
 [image5]: ./from_web/5.jpg "Traffic Sign"
+
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.
@@ -40,7 +43,13 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-The counts of images for each traffic sign suggest that the dataset has many more instances of some classes, compared to others.
+Here's a sample of 5 images:
+
+![sample][sample]
+
+The counts of images for each traffic sign suggest that the dataset has many more instances of some classes, compared to others:
+
+![Histogram][distro]
 
 
 ### Design and Test a Model Architecture
