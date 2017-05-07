@@ -157,6 +157,13 @@ Here are five German traffic signs that I found on the web:
 
 ![1][image1] ![2][image2] ![3][image3] ![4][image4] ![5][image5]
 
+The images were found using google image search, and then cropped and resized to 32x32 size, 3 channels of RGB 8-bit each. Overall, the images look similar to our training image database, however, there are some subtle differences:
+
+- the cropping of the images appears to be closer
+- the images appear to be sharper, having been resized from larger images
+- more interestingly, some images have "watermark" names of the image stock company that the thumbnail originated from. These create a highly correlated, systematic noise that can throw the classifier off. We could potentially train our classifier to generalize over such noise by augmenting our training set with images with such watermarks added programmatically. However, it would only make sense if we targeted images imprinted with watermarks.
+
+
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
