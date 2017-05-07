@@ -1,11 +1,3 @@
-#**Traffic Sign Recognition**
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -19,13 +11,11 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./exa/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./from_web/1.jpg "Traffic Sign"
+[image2]: ./from_web/2.jpg "Traffic Sign"
+[image3]: ./from_web/3.jpg "Traffic Sign"
+[image4]: ./from_web/4.jpg "Traffic Sign"
+[image5]: ./from_web/5.jpg "Traffic Sign"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.
@@ -35,7 +25,7 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/bnugmanov/sdc-p2/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
@@ -50,11 +40,8 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+The counts of images for each traffic sign suggest that the dataset has many more instances of some classes, compared to others.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
-
-![alt text][image1]
 
 ###Design and Test a Model Architecture
 
@@ -68,12 +55,12 @@ normalized inputs.
 
 As the second step, I've added random noise to that normalized data, to improve generalization.
 
-I decided not to generate additional data because I'm way behind schedule.
+I decided not to generate additional data, so as not to slow down the training.
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-I have opted to go adapt the LeNet architecture, with an eye on preventing overfitting.
+I have opted to adapt the LeNet architecture, with an eye on preventing overfitting.
 I have added two dropout layers, in the fully-connected layers of the LeNet.
 
 My final model consisted of the following layers:
@@ -159,10 +146,8 @@ The 95% validation and 93% testing accuracy attest to decent performance. The ti
 
 Here are five German traffic signs that I found on the web:
 
-![1][./from_web/1.jpg] ![2][./from_web/2.jpg] ![3][./from_web/3.jpg]
-![4][./from_web/4.jpg] ![5][./from_web/5.jpg]
+![1][image1] ![2][image2] ![3][image3] ![4][image4] ![5][image5]
 
-The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -212,7 +197,7 @@ For the fourth image:
 | 0.00001               | End of speed limit (80km/h)                   |
 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+It can be seen that these secondary and tertiary guesses do make sense.
+
 
 
